@@ -3,10 +3,8 @@ import './TicTacToe.css';
 import circle_icon from '../Assets/circle.png';
 import cross_icon from '../Assets/cross.png';
 
-// ✅ data is now managed by useState inside the component
 
 const TicTacToe = () => {
-  // ✅ FIX: Use state for the board data
   let [data, setData] = useState(["", "", "", "", "", "", "", "", ""]);
   let [count, setCount] = useState(0);
   let [lock, setLock] = useState(false);
@@ -93,7 +91,6 @@ const TicTacToe = () => {
         TicTacToe Game In <span>React</span>
       </h1>
 
-      {/* ✅ FIX: Single 'board' container for the 3x3 grid layout */}
       <div className='board'>
         <div className="row1">
           {/* Use the index in onClick, and render content from state */}
